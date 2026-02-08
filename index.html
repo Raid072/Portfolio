@@ -17,10 +17,9 @@
 
         * { 
             box-sizing: border-box; 
-            margin: 0; 
-            padding: 0; 
+            margin: 0; padding: 0; 
             -webkit-font-smoothing: antialiased; 
-            user-select: none; /* Prevents text highlighting/copying */
+            user-select: none; 
         }
 
         body {
@@ -47,22 +46,14 @@
         /* --- NAVIGATION --- */
         nav {
             position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 900px;
-            height: 54px;
+            top: 20px; left: 50%; transform: translateX(-50%);
+            width: 90%; max-width: 900px; height: 54px;
             background: var(--glass-navy);
             backdrop-filter: blur(30px) saturate(180%);
-            -webkit-backdrop-filter: blur(30px) saturate(180%);
             border: 1px solid var(--border-white);
             border-radius: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 25px;
-            z-index: 2000;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 25px; z-index: 2000;
         }
 
         nav .logo { font-weight: 700; font-size: 1.1rem; }
@@ -74,10 +65,7 @@
         
         .hero {
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
             background: radial-gradient(circle at center, #0a0a20 0%, #000 80%);
         }
 
@@ -86,11 +74,8 @@
 
         /* --- UI CARD --- */
         .ui-card {
-            cursor: pointer;
-            border-radius: 40px;
-            overflow: hidden;
-            border: 1px solid var(--border-white);
-            background: #050505;
+            cursor: pointer; border-radius: 40px; overflow: hidden;
+            border: 1px solid var(--border-white); background: #050505;
             transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
             position: relative;
         }
@@ -101,19 +86,12 @@
 
         /* --- GLASS CARDS --- */
         .glass-card {
-            background: var(--glass-navy);
-            border: 1px solid var(--border-white);
-            border-radius: 40px;
-            padding: 50px;
-            backdrop-filter: blur(20px);
-            max-width: 600px;
-            margin: 40px auto;
+            background: var(--glass-navy); border: 1px solid var(--border-white);
+            border-radius: 40px; padding: 50px; backdrop-filter: blur(20px);
+            max-width: 600px; margin: 40px auto;
         }
 
-        .server-logo {
-            width: 110px; height: 110px; border-radius: 28px;
-            margin-bottom: 25px; border: 2px solid var(--border-white);
-        }
+        .server-logo { width: 110px; height: 110px; border-radius: 28px; margin-bottom: 25px; border: 2px solid var(--border-white); }
 
         .btn {
             display: inline-block; padding: 18px 40px; border-radius: 16px;
@@ -152,35 +130,32 @@
 
     <div id="wrapper">
         <section class="hero">
-            <div class="reveal" style="background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; border: 1px solid var(--border-white);">SECURE CONNECTION ESTABLISHED</div>
+            <div class="reveal" style="background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; border: 1px solid var(--border-white);">ENCRYPTED PORTFOLIO</div>
             <h1 class="reveal">Hi, I'm <span style="color: var(--accent-blue);">Parro.</span></h1>
             <p class="reveal">Software Architect & Digital Asset Creator</p>
         </section>
 
         <section id="ui">
-            <h2 class="reveal" style="font-size: 3rem; margin-bottom: 50px; letter-spacing: -0.02em;">Visual Designs</h2>
+            <h2 class="reveal" style="font-size: 3rem; margin-bottom: 50px;">Visual Designs</h2>
             <div class="ui-card reveal" onclick="g_o()">
                 <img src="https://s3-alpha.figma.com/hub/file/3685029277/50cfd3be-cb9c-4f60-8b9a-bccf9983c2ef-cover.png">
-                <div class="ui-card-label">View Portfolio →</div>
+                <div class="ui-card-label">View Gallery →</div>
             </div>
         </section>
 
         <section id="store">
             <h2 class="reveal" style="font-size: 3rem; margin-bottom: 20px;">Asset Store</h2>
-            <p class="reveal" style="color: var(--text-dim); margin-bottom: 20px;">Premium resources for your next build.</p>
             <div class="glass-card reveal">
                 <img class="server-logo" src="https://cdn.discordapp.com/attachments/1322471221069086840/1469987305149169759/IMG_5746.png?ex=6989a7dc&is=6988565c&hm=10981689013bcda7d7356a4c84d32a063dbe3e16bcb14182223ae3cbfadacf30&">
-                <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Parro's Assets</h3>
-                <button onclick="s_l('aHR0cHM6Ly9kaXNjb3JkLmdnL3pRNjZCOHVuaHg=')" class="btn" style="background:var(--discord-blurple); color:white;">Join Server</button>
+                <h3 class="reveal">Parro's Assets</h3>
+                <button onclick="s_l('aHR0cHM6Ly9kaXNjb3JkLmdnL3pRNjZCOHVuaHg=')" class="btn reveal" style="background:var(--discord-blurple); color:white; margin-top:20px;">Join Server</button>
             </div>
         </section>
 
         <section id="contact">
-            <h2 class="reveal" style="font-size: 3rem; margin-bottom: 20px;">Direct Inquiry</h2>
             <div class="glass-card reveal" style="border-color: var(--accent-blue);">
-                <div style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase;">Discord Identity</div>
-                <h3 style="font-size: 2.2rem; margin-bottom: 25px;">raid0742</h3>
-                <button onclick="s_l('aHR0cHM6Ly9kaXNjb3JkLmNvbS91c2Vycy9yYWlkMDc0Mg==')" class="btn" style="background:white; color:black;">Shoot a DM</button>
+                <h3 class="reveal" style="font-size: 2.2rem; margin-bottom: 25px;">raid0742</h3>
+                <button onclick="s_l('aHR0cHM6Ly9kaXNjb3JkLmNvbS91c2Vycy9yYWlkMDc0Mg==')" class="btn reveal" style="background:white; color:black;">Shoot a DM</button>
             </div>
         </section>
     </div>
@@ -188,40 +163,35 @@
     <div id="ui-gallery-page">
         <div class="close-btn" onclick="g_c()">Close</div>
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://cdn.discordapp.com/attachments/1322471221069086840/1469985765978013728/HP_Elite_Dragonfly.png?ex=6989a66d&is=698854ed&hm=f3a20926b167d981be811e6f23c61aa1951862bb41fc38a59d62683c029644ec&">
-            </div>
-            <div class="gallery-item">
-                <img src="https://cdn.discordapp.com/attachments/1322471221069086840/1469985766372282512/Galaxy_Tab_S8_Ultra.png?ex=6989a66d&is=698854ed&hm=2f49497a1eb4bf834c4050e925b802e93bf9441710c8222afec85b823162f7b4&">
-            </div>
+            <div class="gallery-item reveal"><img src="https://cdn.discordapp.com/attachments/1322471221069086840/1469985765978013728/HP_Elite_Dragonfly.png?ex=6989a66d&is=698854ed&hm=f3a20926b167d981be811e6f23c61aa1951862bb41fc38a59d62683c029644ec&"></div>
+            <div class="gallery-item reveal"><img src="https://cdn.discordapp.com/attachments/1322471221069086840/1469985766372282512/Galaxy_Tab_S8_Ultra.png?ex=6989a66d&is=698854ed&hm=2f49497a1eb4bf834c4050e925b802e93bf9441710c8222afec85b823162f7b4&"></div>
+            <div class="gallery-item reveal"><img src="https://cdn.discordapp.com/attachments/1322471221069086840/1430172409276793002/Screenshot_2025-10-21_203347.png?ex=69892b99&is=6987da19&hm=481a118a10353c659fb23a7612d47d0171f9318d4cb9b8bec3f1a1b0db7496b4&"></div>
         </div>
     </div>
 
     <script>
-        // --- SECURITY & PROTECTION ---
-        // Blocks F12, Ctrl+U, and Inspect Element Shortcuts
+        // Block Inspect/Source
         document.onkeydown = function(e) {
             if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67)) || (e.ctrlKey && e.keyCode == 85)) return false;
         };
 
-        // Decodes the Base64 Discord links on click
+        // Decryption Logic
         function s_l(e){ window.open(atob(e), '_blank'); }
 
-        // --- INTERACTIVITY ---
+        // Interaction
         function g_o(){ document.getElementById('ui-gallery-page').classList.add('open'); document.body.style.overflow='hidden'; }
         function g_c(){ document.getElementById('ui-gallery-page').classList.remove('open'); document.body.style.overflow='auto'; }
 
-        // Thanos Snap Intersection Observer
+        // Thanos Snap
         const obs = new IntersectionObserver(es => {
             es.forEach(e => {
                 if(e.isIntersecting) e.target.classList.add('active');
                 else e.target.classList.remove('active');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal').forEach(x => obs.observe(x));
 
-        // Smooth Scroll Logic
+        // Smooth Scroll
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
